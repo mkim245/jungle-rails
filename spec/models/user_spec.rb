@@ -18,5 +18,17 @@ RSpec.describe User, type: :model do
       subject.valid?
       expect(subject.errors.full_messages).to include ("Password confirmation doesn't match Password")
     end
+    
+    it 'fails when emails are not unique (not case sensitive)' do
+      User.create(
+        :first_name => "lhouse", 
+        :last_name => "lab", 
+        :email => "LIGHTHOUSE@labs.com",
+        :password => "23456",
+        :password_confirmation => "23456"
+      )
+      expect(subject).not_to be_valid
+      expect(subject.errors).not_to be_empty
+    end
   end
 end
