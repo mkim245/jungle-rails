@@ -50,4 +50,11 @@ RSpec.describe User, type: :model do
       expect(subject.errors).not_to be_empty
     end
   end
+
+  describe '.authenticate_with_credentials' do
+    it 'returns user if succesfully authenticated' do
+      user = User.authenticate_with_credentials('lighthouse@labs.com', '12345')
+      expect(subject).eql? user
+    end
+  end
 end
