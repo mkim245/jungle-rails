@@ -56,5 +56,13 @@ RSpec.describe User, type: :model do
       user = User.authenticate_with_credentials('lighthouse@labs.com', '12345')
       expect(subject).eql? user
     end
+    it 'still authenticates and users if typed email has spaces before and/or after their email address' do
+      user = User.authenticate_with_credentials(' lighthouse@labs.com ', '12345')
+      expect(subject).eql? user
+    end
+    it 'still authenticates and users if typed email has a wrong case for their email address' do
+      user = User.authenticate_with_credentials('lightHouse@labs.COM', '12345')
+      expect(subject).eql? user
+    end
   end
 end
