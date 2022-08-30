@@ -30,5 +30,17 @@ RSpec.describe User, type: :model do
       expect(subject).not_to be_valid
       expect(subject.errors).not_to be_empty
     end
+
+    it 'is not valid when first name is missing' do
+      subject.first_name = nil
+      expect(subject).not_to be_valid
+      expect(subject.errors).not_to be_empty
+    end
+  
+    it 'is not valid when last name is missing' do
+      subject.last_name = nil
+      expect(subject).not_to be_valid
+      expect(subject.errors).not_to be_empty
+    end
   end
 end
