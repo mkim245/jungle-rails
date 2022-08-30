@@ -42,5 +42,12 @@ RSpec.describe User, type: :model do
       expect(subject).not_to be_valid
       expect(subject.errors).not_to be_empty
     end
+
+    it 'is not valid when password and password_confirmation is short than 4 characters' do
+      subject.password = "123"
+      subject.password_confirmation = "123"
+      expect(subject).not_to be_valid
+      expect(subject.errors).not_to be_empty
+    end
   end
 end
