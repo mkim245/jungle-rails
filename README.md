@@ -22,6 +22,27 @@ The final amount for the order is displayed
 
 ## Screenshots
 
+*Main page*
+!["Screenshot"](https://github.com/mkim245/jungle-rails/blob/master/img/main-page.PNG?raw=true)
+
+*Products*
+!["Screenshot"](https://github.com/mkim245/jungle-rails/blob/master/img/main-page-products.PNG?raw=true)
+
+*Admin product page*
+!["Screenshot"](https://github.com/mkim245/jungle-rails/blob/master/img/admin-product-page.PNG?raw=true)
+
+*Admin category page*
+!["Screenshot"](https://github.com/mkim245/jungle-rails/blob/master/img/admin-category-page.PNG?raw=true)
+
+*Registration page*
+!["Screenshot"](https://github.com/mkim245/jungle-rails/blob/master/img/signup-page.PNG?raw=true)
+
+*Signed-in*
+!["Screenshot"](https://github.com/mkim245/jungle-rails/blob/master/img/signed-in.PNG?raw=true)
+
+*My cart page*
+!["Screenshot"](https://github.com/mkim245/jungle-rails/blob/master/img/my-cart-page.PNG?raw=true)
+
 ## Testing
 RSpec for unit testing
 Cypress for integration testing
