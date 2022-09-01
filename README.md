@@ -2,7 +2,31 @@
 
 A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
 
-## Setup
+## Feature Highlights
+
+### Admin Categories
+Admin users can list and create new categories
+Admins can add new products using the new category
+
+### User Authentication
+As a Visitor I can go to the registration page from any page in order to create an account
+As a Visitor I can sign up for a user account with my e-mail, password, first name and last name
+As a Visitor I can sign in using my e-mail and password(minimum 4 characters)
+As a User I can log out from any page
+As a User I cannot sign up with an existing e-mail address (uniqueness validation)
+Passwords are not stored as plain text in the database. Instead, has_secure_password is used in the User model, leveraging the bcrypt gem
+
+### Order Details Page
+The order page contains items, their image, name, description, quantities and line item totals
+The final amount for the order is displayed
+
+## Screenshots
+
+## Testing
+RSpec for unit testing
+Cypress for integration testing
+
+## Getting Started
 
 1. Run `bundle install` to install dependencies
 2. Create `config/database.yml` by copying `config/database.example.yml`
@@ -29,3 +53,4 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - Bootstrap 5
 - PostgreSQL 9.x
 - Stripe
+
